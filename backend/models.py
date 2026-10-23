@@ -184,3 +184,18 @@ class DemoScenarioPreset(BaseModel):
     suggested_role: str
     readings: DrainageReadingInput
     default_overrides: ScenarioOverridesInput
+
+class IndiaLocation(BaseModel):
+    """Geographic location in India; not necessarily a monitored drain."""
+
+    location_id: str
+    name: str
+    state: str
+    latitude: float = Field(..., ge=-90, le=90)
+    longitude: float = Field(..., ge=-180, le=180)
+    location_type: str = Field(
+        ...,
+        description="For example: city, district, or monitoring_site.",
+    )
+    weather_available: bool = False
+    live_drainage_monitoring: bool = False

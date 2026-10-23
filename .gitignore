@@ -59,6 +59,12 @@ Thumbs.db
 # Model artifacts (optional large binaries if not tracked)
 *.pkl
 
+
 # Floodora ML artifacts and datasets
 data/
+!backend/data/
+!backend/data/india_districts.json
 ai_engine/models/*.joblib
+
+# Large source dataset used to regenerate India district catalogue
+/backend/data/district_nwic.GeoJSON
