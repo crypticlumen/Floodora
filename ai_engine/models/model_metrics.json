@@ -1,0 +1,193 @@
+{
+  "project": "Floodora",
+  "dataset_doi": "10.5281/zenodo.18486214",
+  "paper_doi": "10.5194/nhess-26-5119-2026",
+  "training_rows": 8400,
+  "test_rows": 3600,
+  "feature_count": 19,
+  "validation_results": {
+    "LogisticRegression": {
+      "accuracy": 0.6476,
+      "precision": 0.6339,
+      "recall": 0.6988,
+      "f1": 0.6648,
+      "roc_auc": 0.7111,
+      "confusion_matrix": [
+        [
+          501,
+          339
+        ],
+        [
+          253,
+          587
+        ]
+      ],
+      "classification_report": {
+        "non_flood": {
+          "precision": 0.6644562334217506,
+          "recall": 0.5964285714285714,
+          "f1-score": 0.6286072772898369,
+          "support": 840.0
+        },
+        "flood": {
+          "precision": 0.6339092872570194,
+          "recall": 0.6988095238095238,
+          "f1-score": 0.6647791619479049,
+          "support": 840.0
+        },
+        "accuracy": 0.6476190476190476,
+        "macro avg": {
+          "precision": 0.649182760339385,
+          "recall": 0.6476190476190475,
+          "f1-score": 0.6466932196188708,
+          "support": 1680.0
+        },
+        "weighted avg": {
+          "precision": 0.649182760339385,
+          "recall": 0.6476190476190476,
+          "f1-score": 0.6466932196188709,
+          "support": 1680.0
+        }
+      }
+    },
+    "RandomForest": {
+      "accuracy": 0.7417,
+      "precision": 0.6963,
+      "recall": 0.8571,
+      "f1": 0.7684,
+      "roc_auc": 0.8079,
+      "confusion_matrix": [
+        [
+          526,
+          314
+        ],
+        [
+          120,
+          720
+        ]
+      ],
+      "classification_report": {
+        "non_flood": {
+          "precision": 0.8142414860681114,
+          "recall": 0.6261904761904762,
+          "f1-score": 0.7079407806191117,
+          "support": 840.0
+        },
+        "flood": {
+          "precision": 0.6963249516441006,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.768409818569904,
+          "support": 840.0
+        },
+        "accuracy": 0.7416666666666667,
+        "macro avg": {
+          "precision": 0.755283218856106,
+          "recall": 0.7416666666666667,
+          "f1-score": 0.7381752995945079,
+          "support": 1680.0
+        },
+        "weighted avg": {
+          "precision": 0.7552832188561059,
+          "recall": 0.7416666666666667,
+          "f1-score": 0.7381752995945078,
+          "support": 1680.0
+        }
+      }
+    },
+    "ExtraTrees": {
+      "accuracy": 0.7196,
+      "precision": 0.6896,
+      "recall": 0.7988,
+      "f1": 0.7402,
+      "roc_auc": 0.7843,
+      "confusion_matrix": [
+        [
+          538,
+          302
+        ],
+        [
+          169,
+          671
+        ]
+      ],
+      "classification_report": {
+        "non_flood": {
+          "precision": 0.7609618104667609,
+          "recall": 0.6404761904761904,
+          "f1-score": 0.6955397543632837,
+          "support": 840.0
+        },
+        "flood": {
+          "precision": 0.6896197327852004,
+          "recall": 0.7988095238095239,
+          "f1-score": 0.7402095973524545,
+          "support": 840.0
+        },
+        "accuracy": 0.7196428571428571,
+        "macro avg": {
+          "precision": 0.7252907716259807,
+          "recall": 0.7196428571428571,
+          "f1-score": 0.7178746758578691,
+          "support": 1680.0
+        },
+        "weighted avg": {
+          "precision": 0.7252907716259808,
+          "recall": 0.7196428571428571,
+          "f1-score": 0.7178746758578691,
+          "support": 1680.0
+        }
+      }
+    }
+  },
+  "selected_model": "RandomForest",
+  "held_out_test_metrics": {
+    "accuracy": 0.7147,
+    "precision": 0.678,
+    "recall": 0.8178,
+    "f1": 0.7414,
+    "roc_auc": 0.7966,
+    "confusion_matrix": [
+      [
+        1101,
+        699
+      ],
+      [
+        328,
+        1472
+      ]
+    ],
+    "classification_report": {
+      "non_flood": {
+        "precision": 0.7704688593421973,
+        "recall": 0.6116666666666667,
+        "f1-score": 0.6819448745741715,
+        "support": 1800.0
+      },
+      "flood": {
+        "precision": 0.6780285582680792,
+        "recall": 0.8177777777777778,
+        "f1-score": 0.741374968521783,
+        "support": 1800.0
+      },
+      "accuracy": 0.7147222222222223,
+      "macro avg": {
+        "precision": 0.7242487088051383,
+        "recall": 0.7147222222222223,
+        "f1-score": 0.7116599215479773,
+        "support": 3600.0
+      },
+      "weighted avg": {
+        "precision": 0.7242487088051383,
+        "recall": 0.7147222222222223,
+        "f1-score": 0.7116599215479773,
+        "support": 3600.0
+      }
+    }
+  },
+  "limitations": [
+    "Predicts research-derived urban flood-inundation labels.",
+    "Does not directly predict drain blockage or live sensor readings.",
+    "Test metrics are not proof of real-time flood forecasting.",
+    "Independent local validation is required before real-world use."
+  ]
+}

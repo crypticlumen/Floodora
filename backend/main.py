@@ -10,6 +10,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from backend.api.routes_risk import router as risk_router
+from backend.api.routes_inundation import router as inundation_router
 
 APP_METADATA = {
     "title": "Floodora Backend API",
@@ -44,6 +45,7 @@ app.add_middleware(
 
 # Mount routes
 app.include_router(risk_router, prefix="/api")
+app.include_router(inundation_router, prefix="/api")
 
 
 @app.get("/", summary="Root status and welcome", tags=["System"])

@@ -5,3 +5,9 @@ pydantic-settings>=2.2.0
 pytest>=8.0.0
 httpx>=0.27.0
 python-multipart>=0.0.9
+
+# Floodora ML inference and training
+pandas==3.1.0
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2

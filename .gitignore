@@ -58,3 +58,7 @@ Thumbs.db
 
 # Model artifacts (optional large binaries if not tracked)
 *.pkl
+
+# Floodora ML artifacts and datasets
+data/
+ai_engine/models/*.joblib
