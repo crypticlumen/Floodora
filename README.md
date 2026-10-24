@@ -472,9 +472,9 @@ Floodora is currently a prototype and should not be used as a replacement for of
 - [x] Evaluate the selected model on held-out test data.
 - [x] Generate feature-importance outputs.
 - [x] Commit and push the ML training pipeline to its feature branch.
-- [ ] Complete backend development and agree on integration interfaces.
-- [ ] Integrate the ML component where its inputs and outputs are appropriate.
-- [ ] Develop and test a consistent prediction interface.
+- [x] Complete backend development and agree on integration interfaces.
+- [x] Integrate the ML component where its inputs and outputs are appropriate.
+- [x] Develop and test a consistent prediction interface.
 - [ ] Explore live sensor ingestion and data validation.
 - [ ] Improve model validation using geographically or temporally independent data.
 - [ ] Develop a unified application workflow and monitoring dashboard.
